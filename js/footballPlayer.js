@@ -13,8 +13,9 @@ function display( cartProduct ){
         console.log(cartArray[i].playerName);
         const name=cartArray[i].playerName;
        
+        // Create a new element
+        const tr=document.createElement("tr"); 
 
-        const tr=document.createElement("tr");
         tr.innerHTML=`
         <th>${i+1}</th>
         <td>${name}</td>
@@ -37,26 +38,25 @@ function addTocart(element){
     }
     if(cartArray.length<=4){
         cartArray.push(productobj);
-        element.disabled = true; //  if Once selected then disabled the button
+        element.disabled = true;  //  if Once selected then disabled the button
     }
         
     else{
+
+        // when condition is fill up then show a alerts
+
         window.alert("Maximum Players selected!!!!!");
 
     }
     
     
   
-    document.getElementById("totalAddedProducts").innerText=cartArray.length; 
+    document.getElementById("selectedPlayerLength").innerText=cartArray.length; 
     
     display(cartArray)
 }
 
-// document.getElementById('btn-lionel-messi').addEventListener('click',function(){
-//     const buttonLionelMessi=document.getElementById('btn-lionel-messi');
-//     buttonLionelMessi.setAttribute('disabled','true')
-// })
-// document.getElementById("button-1").disabled = true;
+
 
 
 
@@ -68,20 +68,9 @@ document.getElementById('CalculateExpenses').addEventListener('click',function()
     depositField.value='';
 
     TotalExpenses=newDepositAmount*cartArray.length;
+    
     document.getElementById("calculate-players-expenses").innerText=TotalExpenses;
-    // console.log(TotalExpenses);
-    // return TotalExpenses;
-    
-    
-    // console.log(TotalExpenses);
-    // const TotalExpenses=document.getElementById('calculate-players-expenses');
-    // const previousPlayerExpensesString=TotalExpenses.innerText;
-    // const PlayerExpensesTotal=parseFloat(previousPlayerExpensesString);
 
-    // const TotalPlayerExpenses=PlayerExpensesTotal*cartArray.length;
-    // TotalExpenses.innerText=TotalPlayerExpenses;
-
-    // console.log(TotalPlayerExpenses);
 
 })
 document.getElementById('CalculateTotalExpenses').addEventListener('click',function(){

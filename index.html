@@ -115,7 +115,7 @@
       <div class="flex flex-col">
         <div class="h-200" style="height:450px ;">
           <h2 class="text-5xl p-5 mx-5 py-2 italic font-bold">Selected-V Players List
-            <span class="text-blue-400" id="totalAddedProducts">0</span>
+            <span class="text-blue-400" id="selectedPlayerLength">0</span>
           </h2>
           <!-- table -->
           <div class="overflow-x-auto">
@@ -143,20 +143,20 @@
           <h2 class="text-4xl mx-8 my-3 w-75 text-orange-600 italic font-bold	">Budget</h2>
           <div class="flex gap-4">
             <h2 class="text-3xl">Per player</h2>
-            <input class="border-red text-black" id="deposit-field" type="text" placeholder="amount">
+            <input class="border-red text-black text-center " id="deposit-field" type="text" placeholder="amount">
           </div>
           <button class="bg-blue-400 px-10 py-3" id="CalculateExpenses">Calculate</button>
           <h2>Player Expenses $<span id="calculate-players-expenses">0</span></h2>
           <div class="flex gap-4">
             <h2>Manager</h2>
-            <input class="border-red-400 text-black" id="managerField" type="text">
+            <input class="border-red-400 text-black text-center" id="managerField" type="text" placeholder="amount">
           </div>
           <div class="flex gap-4">
             <h2>Coach</h2>
-            <input class="border-red-400 text-black" id="coachField" type="text">
+            <input class="border-red-400 text-black text-center" id="coachField" type="text" placeholder="amount">
           </div>
           <button class="bg-blue-400 px-10 py-3" id="CalculateTotalExpenses">Calculate Total</button>
-          <h2 class="text-2x mb-5">Total $<span id="calculateTotal">0</span></h2>
+          <h2 class="text-2xl mb-5">Total $<span class="text-3xl" id="calculateTotal">0</span></h2>
 
         </div>
 
