@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Most Famouse Players</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="w-full mx-5 my-10 px-8  ">
+        <div class="grid grid-cols-2 gap-4 divide-x">
+
+          <!-- Players List with Pictures and Name -->
+
+            <div class="grid grid-cols-3 gap-4">
+               <!-- Players-1 -->
+              <div>
+                <div class="card card-compact w-full bg-base-100 shadow-xl gap-4">
+                    <figure><img src="img/lionel messi.png"  class="w-full h-40" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Lionel Messi</h2>
+                      <div class="card-actions justify-center">
+                        <button class="btn btn-primary " id="button-1" onclick="addTocart( this)">SELECT</button>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+
+               <!-- Players-2 -->
+                <div>
+                    <div class="card card-compact w-full bg-base-100 shadow-xl gap-4">
+                        <figure><img src="img/neymar.png" class="w-full h-40" alt="Shoes" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Neymar jr.</h2>     
+                          <div class="card-actions justify-center">
+                            <button class="btn btn-primary " id="btn-lionel-messi " onclick="addTocart(this)" >SELECT</button>
+                          </div> 
+                        </div>
+                      </div>
+                </div>
+              <!-- Players-3-->
+                <div>
+                    <div class="card card-compact w-full bg-base-100 shadow-xl gap-4">
+                        <figure><img src="img/ramos.png" class="w-full h-40" alt="Shoes" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Sergio Ramos</h2>
+                          <div class="card-actions justify-center">
+                            <button class="btn btn-primary " id="btn-3 " onclick="addTocart(this)">SELECT</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+               <!-- players-4 -->
+                <div>
+                    <div class="card card-compact w-full bg-base-100 shadow-xl gap-4">
+                        <figure><img src="img/Ambappe.png" class="w-full h-40" alt="Shoes" /></figure>
+                        <div class="card-body">
+                          <h2 class="text-xl">Killian Ambappe</h2>
+                          <div class="card-actions justify-center">
+                            <button class="btn btn-primary " id="btn-4" onclick="addTocart(this)" >SELECT</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+               <!-- players-5 -->
+                <div>
+                    <div class="card card-compact w-full bg-base-100 shadow-xl gap-4">
+                        <figure><img src="img/hazard.png" class="w-full h-40" alt="Shoes" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Hazard</h2>
+                          <div class="card-actions justify-center">
+                            <button class="btn btn-primary"  id="btn-5 " onclick="addTocart(this )" id="btn-lionel-Messi">SELECT</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+                <!-- players-6 -->
+                <div>
+                  <div class="card card-compact w-full bg-base-100 shadow-xl gap-4">
+                      <figure><img src="img/sanches.png" class="w-full h-40" alt="Shoes" /></figure>
+                      <div class="card-body">
+                        <h2 class="card-title">Sanches</h2>
+                        <div class="card-actions justify-center">
+                          <button class="btn btn-primary"  id="btn-5 " onclick="addTocart(this )" id="btn-lionel-Messi">SELECT</button>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+        
+              </div>
+            
+
+              <!-- Select Bar Start  -->
+
+           <div class="flex flex-col">
+            <div class="h-200" style="height:450px ;">
+              <h2 class="text-5xl">Total Added Product 
+                <span class="text-blue-400" id="totalAddedProducts">0</span>
+               </h2>
+               <!-- table -->
+               <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                  <!-- head -->
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Name</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody id="cart-products">
+                    
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+<!----------------------- Select Bar End  --------------------------------------->
+
+            <!-- Calculation Options start -->
+
+            <div class="items-center px-8 flex flex-col gap-4 bg-slate-800	 text-white ">
+              <h2 class="text-4xl mx-8 my-3 w-75	">Budget</h2>
+              <div class="flex gap-4">
+                <h2 class="text-3xl">Per player</h2>
+                <input class="border-red text-black" id="deposit-field" type="text" placeholder="amount">
+              </div>
+              <button class="bg-blue-400 px-10 py-3" id="CalculateExpenses">Calculate</button>
+              <h2>Player Expenses $<span id="calculate-players-expenses">0</span></h2>
+              <div class="flex gap-4">
+                <h2>Manager</h2>
+                <input class="border-red-400 text-black" id="managerField" type="text">
+              </div>
+              <div class="flex gap-4">
+                <h2>Coach</h2>
+                <input class="border-red-400 text-black" id="coachField" type="text">
+              </div>
+              <button class="bg-blue-400 px-10 py-3" id="CalculateTotalExpenses">Calculate Total</button>
+              <h2 class="text-2x mb-5">Total $<span id="calculateTotal">0</span></h2>
+
+            </div>
+
+    <!----------------------------- Calculation Options End ---------------------------->
+
+           </div>
+          </div>
+    </section>
+    
+    <script src="js/shopping.js"> </script>
+</body>
+</html>
